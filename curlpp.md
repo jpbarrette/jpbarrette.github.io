@@ -19,9 +19,7 @@ libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported and 
 </cite>
 
 First, I need to quote Daniel Stenberg, the maintener of libcURL:
-<cite>You can use libcURL instantly from within your C++ programs. You don't need cURLpp for that, cURLpp just adds an OO'ified layer that libcURL doesn't normally provide.</cite>
-
-It means that you need to be sure that you need, or want, cURLpp features. If not, I suggest to use directly the libcURL library. So, what are thoses features that cURLpp offers?
+<cite>You can use libcURL instantly from within your C++ programs. You don't need cURLpp for that, cURLpp just adds an OO'ified layer that libcURL doesn't normally provide.</cite> It means that you need to be sure that you need, or want, cURLpp features. If not, I suggest to use directly the libcURL library. So, what are thoses features that cURLpp offers?
 
 * You can query handles for option values (version 0.5.x and newer only).
 * It use the C++ standard library structures instead of home made ones.
@@ -30,29 +28,33 @@ It means that you need to be sure that you need, or want, cURLpp features. If no
 
 #Downloads
 
-see github repo for this.
+See cURLpp's [github](http://github.com/jpbarrette/curlpp) repo for this.
 
 #License
 
 <cite>
 cURLpp is true Open Source/Free Software and meet all definitions as such. It means that you are free to modify and redistribute all contents of the cURLpp distributed archives. You may also freely use cURLpp in your commercial projects. cURLpp is licensed under a MIT license, see below.
 
-Copyright @ 2002-2006, Jean-Philippe Barrette-LaPierre
+<cite>Copyright @ 2002-2006, Jean-Philippe Barrette-LaPierre
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+<cite>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+<cite>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+<cite>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </cite> 
 
 # Documentation
 
-The programming guide for the 0.5.x and newer versions is here. This guide is greatly inspired by the libcURL guide, that I strongly suggest to read. There's also some examples in the "examples/" source directory of cURLpp.
+The programming guide for the 0.5.x and newer versions is [here](guide.pdf). This guide is greatly inspired by the libcURL guide, that I strongly suggest to read. There's also some examples in the "[examples](http://github.com/jpbarrette/curlpp/tree/master/examples)/" source directory of cURLpp.
 
-# Branches
+# Development history
 
-The devel branch (0.5.x and newer)
+## The original code (versions up to 0.3x)
+
+This project was branched over the project began by Eric Lavigne. It's no longer active.
+
+## The refactor over the original code (0.5.x and newer)
 
 This version is a complete re-factorization of cURLpp against 0.3.x and older versions. This re-factorization was made for the following reasons:
 
@@ -69,13 +71,9 @@ Seriously, here's the advantages of this new design:
 * Allow you to retrieve the option values already set on the handle.
 * For more details, see the guide. Note that, as you probably deduced, this version is NOT compatible against 0.3.x and older versions.
 
-## The stable branch
-
-This version is designed over the project began by Eric Lavigne. It's no longer active.
-
 ## Development Plans
 
-So, what's next? I have some ideas for future releases. If you want to suggest some feature, don't be shy and send me an email (see at the bottom of the page).
+So, what's next? I have some ideas for future releases. If you want to suggest some feature, don't be shy and send me an email.
 
 ### Version 0.6.0 (Out)
 
@@ -107,5 +105,5 @@ cURLpp is meant to be portable, but I can't maintain, all by myself, a project f
 
 # Mailing-List
 
-If you have some questions or bugs to submit, you call send an email to the mailing-list . You need to register to the mailing-list before sending any email. However, keep in mind that cURLpp is a C++ wrapper over libcURL, so if you have a libcURL feature's related question, send it to libcURL's mailing-list.
+If you have some questions or bugs to submit, you call send an email to the mailing-list. You need to register to the mailing-list before sending any email. However, keep in mind that cURLpp is a C++ wrapper over libcURL, so if you have a libcURL feature's related question, send it to libcURL's mailing-list.
 
