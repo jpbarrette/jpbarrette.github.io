@@ -1,1 +1,3 @@
 encoding: ASCII-8BIT
+gems:
+  - jekyll-redirect-from
