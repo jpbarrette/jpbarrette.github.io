@@ -1,0 +1,217 @@
+% Andrew McNabb's Resume
+% Created: 7 Jan 2004
+% Last Modified: 17 Jul 2004
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Jean-Philippe Barrette-LaPierre}
+\newcommand{\addr}{3922 Joseph, Montr\'eal, QC, Canada, H4G 1J4}
+\newcommand{\phone}{+1 (514) 691-6815}
+\newcommand{\email}{jpb@rrette.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% \begin{ressection}{\'Education}
+
+%% 	\begin{ressubsec}{Universit\'e Laval}{Qu\'ebec, QC, Canada}{Baccalauréat en informatique: Septembre 2004--Main 2005}
+	  
+%% 	\end{ressubsec}
+	
+%% 	\begin{ressubsec}{Universit\'e Concordia}{Montr\'eal, QC, Canada}{Computer Science: Septembre 2003--Mai 2004}
+%% 	\end{ressubsec}
+
+%% \end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% \begin{ressection}{Profil}
+%%   \resitem{Ici commence le texte.}
+%% \end{ressection}
+
+
+\begin{ressection}{Exp\'erience}
+
+	\begin{ressubsec}{Savoir-Faire Linux}{Qu\'ebec, QC, Canada}{Programmeur Analyste, Support à la clientèle, Formateur: Mai 2005--F\'evrier 2006}
+          \ressubitem{Consultant pour le compte de Savoir-Faire Linux, compagnie sp\'ecialis\'ee dans le développement et dans l'administration sous plateforme Linux.}
+	  \ressubitem{Cr\'eation d'une application Java de signature digitale de document PDF.}
+	  \ressubitem{Cr\'eation d'une application de téléphonie VoIP.}
+	  \ressubitem{Enseignement de cours d'initiation au syst\`eme d'exploitation Linux.}
+	  \ressubitem{Enseignement de cours d'initiation à la platforme de développement LAMP (Linux/Apache/MySQL/PHP).}
+	\end{ressubsec}
+        
+ 	\begin{ressubsec}{Camelot-Info}{Québec, QC, Canada}{Commis libraire: Octobre 2004--Mai 2005}
+ 	  \ressubitem{Commis libraire chez Camelot-Info.}
+ 	\end{ressubsec}
+
+	\begin{ressubsec}{Hartshorne Software Inc.}{Montr\'eal, QC, Canada}{Programmeur Analyste: Mai 2004--Octobre 2004}
+	  \ressubitem{Cr\'eation d'un programme python traitant les événements COM de Quickbooks pour la synchronisation vers une base de donn\'ee PostgreSQL.}
+	  \ressubitem{``Refactorisation'' d'un syst\`eme d'``ERP'' \'ecrit en PHP.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Savoir-Faire Linux}{Montr\'eal, QC, Canada}{Programmeur Analyste: Avril 2003--D\'ecembre 2003}
+	  \ressubitem{Cr\'eation d'un site web PHP pour la gestion d'exp\'editions.}
+	  \ressubitem{Cr\'eation d'un syst\`eme automatis\'e d'envoi \'electronique(FTP, HTTP, Fax, courriel) en Python.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{ICI Design}{Montr\'eal, QC, Canada}{Consultant: Ao\^ut 2003}
+	  \ressubitem{\'Evaluation d'un projet en C, utilisant un ``embedded device'' (processeur MIPS), sous Linux. (1 mois)}
+	\end{ressubsec}
+
+	\begin{ressubsec}{ProgSo}{Montr\'eal, QC, Canada}{Programmeur Analyste: Ao\^ut 2001--D\'ecembre 2002}
+          \ressubitem{Compagnie ayant achet\'e Eclipsys.}
+	  \ressubitem{Supervision d'une petite équipe (2 à 5 personnes)}
+	  \ressubitem{Cr\'eation d'un jeu multi-platformes(BeOS, MacOS, Windows, Linux) \`a partir de librairies LGPL. Construction compl\`ete d'un engin graphique gr\^ace \`a la librairie SDL. Utilisation de libcURL et Xerces-C(XML) pour transactions internet. (8 mois)}
+	  \ressubitem{Cr\'eation d'un logiciel d'envoi automatis\'e de courriel. Utilisation pour ce projet de libsmtp, ainsi que de Pthreads(programmation parall\`ele). (1 mois)}
+	  \ressubitem{\'Elaboration d'un logiciel d'authentification aupr\`es d'une banque, \`a travers internet. Utilisation d'OpenSSL(encryption) et ``kit'' pour smartcards. (2 mois)}
+	  \ressubitem{Cr\'eation d'un serveur passerelle VoIP(Voice over IP), pour le serveur BCM de Nortel.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{ICI Design}{Qu\'ebec, QC, Canada}{Consultant: Mai 2002}
+	  \ressubitem{\'Evaluation et identification des probl\`emes(``bugs'').}
+	  \ressubitem{\'Evaluation des programmeurs et du travail de ces programmeurs travaillant sur ce projet.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Eclipsys}{Montr\'eal, QC, Canada}{Programmeur Analyste: Mai 2001--Ao\^ut 2001}
+	  \ressubitem{D\'eveloppement d'une distributrice \`a carte compl\`etement g\'er\'ee par un programme sous plateforme Linux.}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Comp\'etences}
+
+  \resitem{\textbf{Syst\`emes d'exploitation:} Linux (Mandrake, Red Hat, et Debian), Windows 98/2000/XP}
+  
+  \begin{reslist}{Langages Informatiques:}
+
+		\ressubitem{Proficient dans C, C++, Java, Python, PHP, HTML, SQL, Programmation UNIX, Programmation Parall\`elle, Designs Patterns}
+
+		\ressubitem{Familier avec Lisp (Common Lisp/Scheme), UNIX Shells}
+
+	\end{reslist}
+
+	\begin{reslist}{Librairies}
+	   \ressubitem{Proficient dans libcURL}
+	   \ressubitem{Familier avec Qt, SDL, Xerces-C(XML), XML-RPC}
+	\end{reslist}
+
+	\begin{reslist}{Syst\`emes et Outils:}
+
+		\ressubitem{Proficient dans CVS/RCS, Autotools, GnuPG, SSHD, Emacs}
+
+		\ressubitem{Familier avec MySQL, PostgreSQL, NFS, OpenLDAP, OpenSSL, Samba, \LaTeX}
+
+	\end{reslist}
+
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Projets Open-Source}
+  \begin{ressubsec}{SFLPhone}{http:://www.sflphone.org}{Mai 2005--maintenant}
+    \ressubitem{Collaborateur \`a plein temps sur SFLPhone, Logiciel de T\'el\'ephonie VoIP.}
+  \end{ressubsec}
+  \begin{ressubsec}{cURLpp}{http://rrette.com/curlpp.html}{Mai 2002--maintenant}
+    \ressubitem{``Mainteneur'' du projet cURLpp, le ``wrapper'' C++ officiel de la librairie libcURL.}
+  \end{ressubsec}
+  \begin{ressubsec}{Moman}{http://rrette.com/moman.html}{Janvier 2004--maintenant}
+    \ressubitem{``Mainteneur'' de moman, correcteur orthographique et grammatical.}
+  \end{ressubsec}
+\end{ressection}
+  
+\end{document}

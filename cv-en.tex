@@ -1,0 +1,215 @@
+% Andrew McNabb's Resume
+% Created: 7 Jan 2004
+% Last Modified: 17 Jul 2004
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Jean-Philippe Barrette-LaPierre}
+\newcommand{\addr}{3922 Joseph, Montr\'eal, QC, Canada, H4G 1J4}
+\newcommand{\phone}{+1 (514) 691-6815}
+\newcommand{\email}{jpb@rrette.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape #1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large #1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item #1 
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt} \item #1 
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item 
+	\textbf{#1}---#2 \newline
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl}\selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% \begin{ressection}{\'Education}
+
+%% 	\begin{ressubsec}{Universit\'e Laval}{Qu\'ebec, QC, Canada}{Baccalauréat en informatique: Septembre 2004--Main 2005}
+	  
+%% 	\end{ressubsec}
+	
+%% 	\begin{ressubsec}{Universit\'e Concordia}{Montr\'eal, QC, Canada}{Computer Science: Septembre 2003--Mai 2004}
+%% 	\end{ressubsec}
+
+%% \end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% \begin{ressection}{Profile}
+%%   \resitem{Ici commence le texte.}
+%% \end{ressection}
+
+
+\begin{ressection}{Experience}
+	\begin{ressubsec}{Savoir-Faire Linux}{Qu\'ebec, QC, Canada}{Programmer, Client Support, Instructor: May, 2005--February, 2006}
+		\ressubitem{Savoir-Faire Linux specializes in application development and system administration on the GNU/Linux platform.}
+                \ressubitem{Built a PDF digital signature Java application.}
+		\ressubitem{Built a VoIP Telephony application.}
+		\ressubitem{Taught an introductionary course on GNU/Linux system administration.}
+		\ressubitem{Taught an introductionary course on LAMP (Linux/Apache/MySQL/PHP) programming platform.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Camelot-Info}{Québec, QC, Canada}{Clerk: October, 2004--May, 2005}
+	  \ressubitem{Worked as a book clerk at a computer bookstore.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Hartshorne Software Inc.}{Montr\'eal, QC, Canada}{Programmer: May, 2004--October, 2004}
+	  \ressubitem{Built a Python application to synchronize QuickBooks COM events to a PostgreSQL database.}
+	  \ressubitem{Refactored an ERP system built on PHP.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Savoir-Faire Linux}{Montr\'eal, QC, Canada}{Programmer: April, 2003--December, 2003}
+	  \ressubitem{Built a PHP application to manage a shipping fulfillment operation.}
+	  \ressubitem{Built an automated electronic messaging system for FTP/HTTP/Fax/Email with Python.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{ICI Design}{Montr\'eal, QC, Canada}{Consultant: April, 2003}
+	  \ressubitem{Analysed a C project, that used an embedded device (MIPS Processor), on the GNU/Linux platform. (1 month)}
+	\end{ressubsec}
+
+	\begin{ressubsec}{ProgSo}{Montr\'eal, QC, Canada}{Programmer: August, 2001--December, 2002}
+	  \ressubitem{Supervised a small team (2--5 people)}
+	  \ressubitem{Built a multi-platform game (BeOS, MacOS, Windows, GNU/Linux) with LGPL libraries. Built a graphical engine from scratch with SDL. Used libcURL and Xerces-C (XML) for the internet transactions. (8 months)}
+	  \ressubitem{Built an automatic mailer. Used libsmtp and Pthreads (parallel programming). (1 month)}
+	  \ressubitem{Built an internet bank authentification application. Used OpenSSL (encryption) and smartcards kit. (2 months)}
+	  \ressubitem{Configured a VoIP gateway for Nortel's BCM.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{ICI Design}{Qu\'ebec, QC, Canada}{Consultant: May, 2002}
+	  \ressubitem{Evaluated and identified bugs in an embedded internet radio.}
+	  \ressubitem{Evaluated programmers' work on this project.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Eclipsys}{Montr\'eal, QC, Canada}{Programmer: May, 2001--August, 2001}
+	  \ressubitem{Developed a vending machine control program, running on the GNU/Linux platform.}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills}
+
+  \begin{reslist}{Operating Systems:} 
+    \ressubitem{GNU/Linux (Mandrake, Red Hat, and Debian)}
+    \ressubitem{Windows 98/2000/XP}
+  \end{reslist}
+  
+  \begin{reslist}{Programming Languages:}
+		\ressubitem{Proficient in C, C++, Java, Python, PHP, HTML, SQL, UNIX Programming, Parallel Programming, Designs Patterns}
+		\ressubitem{Familiar with Lisp (Common Lisp/Scheme), UNIX Shells}
+
+	\end{reslist}
+
+	\begin{reslist}{Libraries:}
+	   \ressubitem{Proficient in libcURL}
+	   \ressubitem{Familiar with Qt, SDL, Xerces-C(XML), XML-RPC}
+	\end{reslist}
+
+	\begin{reslist}{Systems and Tools:}
+
+		\ressubitem{Proficient in CVS/RCS, Autotools, GnuPG, SSHD, Emacs}
+
+		\ressubitem{Familiar with MySQL, PostgreSQL, NFS, OpenLDAP, OpenSSL, Samba, \LaTeX}
+
+	\end{reslist}
+
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Open-source Projects}
+  \begin{ressubsec}{SFLPhone}{http:://www.sflphone.org}{May 2005--now}
+    \ressubitem{Full-time programmer on SFLPhone, VoIP telephony software.}
+  \end{ressubsec}
+  \begin{ressubsec}{cURLpp}{http://rrette.com/curlpp.html}{May 2002--now}
+    \ressubitem{Maintener of cURLpp, the official C++ wrapper of the libcURL library.}
+  \end{ressubsec}
+  \begin{ressubsec}{Moman}{http://rrette.com/moman.html}{January, 2004--now}
+    \ressubitem{Maintener of moman, an orthographic and grammar corrector.}
+  \end{ressubsec}
+\end{ressection}
+  
+\end{document}
